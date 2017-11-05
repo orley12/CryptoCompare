@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.cryptocompare.CryptoConvert">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/crypto_view">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/crypto_image_view"
+            android:foregroundGravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/crypto_linear_layout"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/crypto_image_view">
+
+            <TextView
+                android:id="@+id/Cryto_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Crypto Currency"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/crypto_price_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:inputType="numberDecimal|number"
+                android:textColor="#000000"
+                tools:text="000000" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/base_image_view"
+            android:foregroundGravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/base_linear_layout"
+            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/base_image_view">
+
+            <TextView
+                android:id="@+id/base_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Base Currency"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/base_price_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:inputType="numberDecimal|number"
+                tools:text="000000" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

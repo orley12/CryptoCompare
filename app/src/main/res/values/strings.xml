@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CryptoCompare</string>
+    <string name="title_activity_crypto_list">CryptoList</string>
+    <string name="title_activity_crypto_convert">CryptoConvert</string>
+    <string name="btc">BTC</string>
+    <string name="eth">ETH</string>
+    <string name="usd">US Dollar</string>
+    <string name="rupee">Indian Rupee</string>
+    <string name="sgd">Singapore Dollar</string>
+    <string name="twd">Taiwan Dollar</string>
+    <string name="aud">Australian Dollar</string>
+    <string name="euro">Euro</string>
+    <string name="gbp">British GBP</string>
+    <string name="rand">South African Rand</string>
+    <string name="peso">Mexican Peso</string>
+    <string name="shekel">Israel Shekel</string>
+    <string name="nzd">New Zealand Dollar</string>
+    <string name="korna">Swedish Krona</string>
+    <string name="franc">Swiss Franc</string>
+    <string name="korne">Norwegian krone</string>
+    <string name="naira">Nigerian Naira</string>
+    <string name="sar">Saudi Arabia Riyal</string>
+    <string name="aed">Arab Emirates Dirham</string>
+    <string name="php">Philippines Peso</string>
+    <string name="gtq">Guatemala Quetzal</string>
+    <string name="ghs">Ghana New Cedi</string>
+    <string name="rub">Ghana New Cedi</string>
+
+
+
+
+</resources>
