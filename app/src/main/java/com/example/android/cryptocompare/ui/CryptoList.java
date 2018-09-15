@@ -1,4 +1,4 @@
-package com.example.android.cryptocompare.ui;
+ package com.example.android.cryptocompare.ui;
 
 
 import android.app.Activity;
