@@ -1,4 +1,4 @@
-package com.example.android.cryptocompare;
+package com.example.android.cryptocompare.utilities;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -15,7 +15,7 @@
     <string-array name="array_base_options">
         <item>@string/naira</item>
         <item>@string/usd</item>
-        <item>@string/rupee</item>
+        <item>@string/inr</item>
         <item>@string/sgd</item>
         <item>@string/twd</item>
         <item>@string/aud</item>

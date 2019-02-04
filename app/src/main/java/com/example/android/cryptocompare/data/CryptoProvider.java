@@ -7,7 +7,10 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.Log;
+
+import com.example.android.cryptocompare.data.CryptoContract.CryptoEntry;
 
 /**
  * Created by SOLARIN O. OLUBAYODE on 31/10/17.
@@ -44,13 +47,13 @@ public class CryptoProvider extends ContentProvider {
         int match = sUrimatcher.match(uri);
         switch (match) {
             case CRYPTO_ALL:
-                cursor = database.query(CryptoContract.CryptoEntry.TABLE_NAME, projection, selection,
+                cursor = database.query(CryptoEntry.TABLE_NAME, projection, selection,
                         selectionArgs, null, null, sortOrder);
                 break;
             case CRYPTO_ID:
-                selection = CryptoContract.CryptoEntry._ID + "=?";
+                selection = CryptoEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
-                cursor = database.query(CryptoContract.CryptoEntry.TABLE_NAME, projection, selection,
+                cursor = database.query(CryptoEntry.TABLE_NAME, projection, selection,
                         selectionArgs, null, null, sortOrder);
                 break;
             default:
@@ -79,7 +82,7 @@ public class CryptoProvider extends ContentProvider {
     private Uri insertCrypto(Uri uri, ContentValues values) {
         SQLiteDatabase db = mCryptoDbHelper.getWritableDatabase();
 
-        long id = db.insert(CryptoContract.CryptoEntry.TABLE_NAME, null, values);
+        long id = db.insert(CryptoEntry.TABLE_NAME, null, values);
 
         if (id == -1) {
             Log.e(LOG_TAG, "Failed to insert row for" + uri);
@@ -95,12 +98,12 @@ public class CryptoProvider extends ContentProvider {
         int match = sUrimatcher.match(uri);
         switch (match) {
             case CRYPTO_ALL:
-                cursor = database.delete(CryptoContract.CryptoEntry.TABLE_NAME, selection, selectionArgs);
+                cursor = database.delete(CryptoEntry.TABLE_NAME, selection, selectionArgs);
                 break;
             case CRYPTO_ID:
-                selection = CryptoContract.CryptoEntry._ID + "=?";
+                selection = CryptoEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
-                cursor = database.delete(CryptoContract.CryptoEntry.TABLE_NAME, selection,
+                cursor = database.delete(CryptoEntry.TABLE_NAME, selection,
                         selectionArgs);
                 break;
             default:
@@ -114,4 +117,37 @@ public class CryptoProvider extends ContentProvider {
     public int update( Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         return 0;
     }
+
+    @Override
+    public int bulkInsert(@NonNull Uri uri, @NonNull ContentValues[] values) {
+        final SQLiteDatabase db = mCryptoDbHelper.getWritableDatabase();
+
+        switch (sUrimatcher.match(uri)) {
+
+            case CRYPTO_ALL:
+                db.beginTransaction();
+                int rowsInserted = 0;
+                try {
+                    for (ContentValues value : values) {
+                        long _id = db.insert(CryptoEntry.TABLE_NAME, null, value);
+                        if (_id != -1) {
+                            rowsInserted++;
+                        }
+                    }
+                    db.setTransactionSuccessful();
+                } finally {
+                    db.endTransaction();
+                }
+
+                if (rowsInserted > 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+
+                return rowsInserted;
+
+            default:
+                return super.bulkInsert(uri, values);
+        }
+    }
+
 }
