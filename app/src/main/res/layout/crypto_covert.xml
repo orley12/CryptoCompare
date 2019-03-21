@@ -1,95 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.cryptocompare.CryptoConvert">
+    android:padding="20dp"
+    tools:context="com.example.android.cryptocompare.ui.CryptoConvert">
 
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/crypto_view">
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:id="@+id/crypto_image_view"
-            android:foregroundGravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"/>
+            android:id="@+id/img_conv_crypto"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/app_name"
+            tools:src="@mipmap/ic_launcher_round" />
 
-        <LinearLayout
-            android:id="@+id/crypto_linear_layout"
-            android:layout_height="70dp"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit_cryptocurr"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_toRightOf="@id/crypto_image_view">
 
-            <TextView
-                android:id="@+id/Cryto_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Crypto Currency"
-                android:gravity="center" />
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel" />
 
-            <EditText
-                android:id="@+id/crypto_price_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:inputType="numberDecimal|number"
-                android:textColor="#000000"
-                tools:text="000000" />
-        </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:id="@+id/base_image_view"
-            android:foregroundGravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"/>
+            android:id="@+id/img_conv_world"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/app_name"
+            tools:src="@mipmap/ic_launcher_round" />
 
-        <LinearLayout
-            android:id="@+id/base_linear_layout"
-            android:layout_height="70dp"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit_worldcurr"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_toRightOf="@id/base_image_view">
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextLabel" />
 
-            <TextView
-                android:id="@+id/base_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Base Currency"
-                android:gravity="center" />
 
-            <EditText
-                android:id="@+id/base_price_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#000000"
-                android:inputType="numberDecimal|number"
-                tools:text="000000" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
+    </LinearLayout>
 
 
 </LinearLayout>

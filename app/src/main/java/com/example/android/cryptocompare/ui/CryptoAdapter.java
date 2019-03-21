@@ -1,9 +1,13 @@
-package com.example.android.cryptocompare;
+package com.example.android.cryptocompare.ui;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.android.cryptocompare.R;
+import com.example.android.cryptocompare.model.Crypto;
 
 import java.util.List;
 
@@ -13,6 +17,7 @@ import java.util.List;
 
 public class CryptoAdapter extends RecyclerView.Adapter<CryptoViewHolder> {
 
+    private static final String LOG_TAG =CryptoAdapter.class.getSimpleName() ;
     private List<Crypto> cryptoList;
 
     public CryptoAdapter(List<Crypto> cryptoList) {
@@ -22,6 +27,7 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoViewHolder> {
     @Override
     public void onBindViewHolder(CryptoViewHolder holder, int position) {
         Crypto ci = cryptoList.get(position);
+        Log.i(LOG_TAG.toUpperCase(),"=====> " + ci.getCurrencyValue());
         holder.BindHolder(ci);
     }
 
@@ -43,7 +49,6 @@ public class CryptoAdapter extends RecyclerView.Adapter<CryptoViewHolder> {
 
     public void addAll(List<Crypto> cryptos){
         cryptoList.addAll(cryptos);
-
         notifyDataSetChanged();
     }
 

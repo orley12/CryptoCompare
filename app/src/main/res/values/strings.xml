@@ -2,31 +2,54 @@
     <string name="app_name">CryptoCompare</string>
     <string name="title_activity_crypto_list">CryptoList</string>
     <string name="title_activity_crypto_convert">CryptoConvert</string>
-    <string name="btc">BTC</string>
-    <string name="eth">ETH</string>
-    <string name="usd">US Dollar</string>
-    <string name="rupee">Indian Rupee</string>
+    <string name="bitcoin">BTC</string>
+    <string name="ethereum">ETH</string>
+    <string name="usa_dollar">USD</string>
+    <string name="indian_rupee">INR</string>
+    <string name="singapore_dollar">SGD</string>
+    <string name="taiwan_dollar">TWD</string>
+    <string name="australian_dollar">AUD</string>
+    <string name="euro">EUR</string>
+    <string name="great_britain_pound">GBP</string>
+    <string name="south_african_rand">ZAR</string>
+    <string name="mexican_peso">MXN</string>
+    <string name="israel_new_shekel">ILS</string>
+    <string name="new_zealand_dollar">NZD</string>
+    <string name="swedish_krona">SEK</string>
+    <string name="switzerland_franc">CHF</string>
+    <string name="norwegian_krone">NOK</string>
+    <string name="nigerian_naira">NGN</string>
+    <string name="saudi_arabia_riyal">SAR</string>
+    <string name="arab_emirates_dirham">AED</string>
+    <string name="philippines_peso">PHP</string>
+    <string name="guatemala_quetzal">GTQ</string>
+    <string name="ghana_new_cedi">GHS</string>
+    <string name="no_saved_card">No Card Added</string>
+    <string name="add_one_to_get_started">Add one to get started</string>
+    <string name="last_update">Last Update</string>
+    <string name="colon">:</string>
+
+    <string name="btc">Bitcoin</string>
+    <string name="eth">Ethereum</string>
+    <string name="usd">USA Dollar</string>
+    <string name="inr">Indian Rupee</string>
     <string name="sgd">Singapore Dollar</string>
     <string name="twd">Taiwan Dollar</string>
     <string name="aud">Australian Dollar</string>
-    <string name="euro">Euro</string>
-    <string name="gbp">British GBP</string>
-    <string name="rand">South African Rand</string>
-    <string name="peso">Mexican Peso</string>
-    <string name="shekel">Israel Shekel</string>
+    <string name="eur">Euro</string>
+    <string name="gbp">Great Britain Pound</string>
+    <string name="zar">South African Rand</string>
+    <string name="mxn">Mexican Peso</string>
+    <string name="ils">Israel New Shekel</string>
     <string name="nzd">New Zealand Dollar</string>
-    <string name="korna">Swedish Krona</string>
-    <string name="franc">Swiss Franc</string>
-    <string name="korne">Norwegian krone</string>
-    <string name="naira">Nigerian Naira</string>
+    <string name="sek">Swedish Krona</string>
+    <string name="chf">Switzerland Franc</string>
+    <string name="nok">Norwegian krone</string>
+    <string name="ngn">Nigerian Naira</string>
     <string name="sar">Saudi Arabia Riyal</string>
     <string name="aed">Arab Emirates Dirham</string>
     <string name="php">Philippines Peso</string>
     <string name="gtq">Guatemala Quetzal</string>
     <string name="ghs">Ghana New Cedi</string>
-    <string name="rub">Ghana New Cedi</string>
-
-
-
 
 </resources>

@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CryptoList">
+        <activity android:name=".ui.CryptoList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,13 +20,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CryptoConvert"
+            android:name=".ui.CryptoConvert"
             android:label="@string/title_activity_crypto_convert"
             android:theme="@style/AppTheme" />
-        <provider
-            android:authorities="com.example.android.crypto"
-            android:name=".data.CryptoProvider"
-            android:exported="false"/>
     </application>
 
 </manifest>

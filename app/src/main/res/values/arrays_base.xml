@@ -13,26 +13,26 @@
 <resources>
     <!-- These are the options displayed in the gender drop-down Spinner -->
     <string-array name="array_base_options">
-        <item>@string/naira</item>
-        <item>@string/usd</item>
-        <item>@string/rupee</item>
-        <item>@string/sgd</item>
-        <item>@string/twd</item>
-        <item>@string/aud</item>
+        <item>@string/nigerian_naira</item>
+        <item>@string/usa_dollar</item>
+        <item>@string/indian_rupee</item>
+        <item>@string/singapore_dollar</item>
+        <item>@string/taiwan_dollar</item>
+        <item>@string/australian_dollar</item>
         <item>@string/euro</item>
-        <item>@string/gbp</item>
-        <item>@string/rand</item>
-        <item>@string/peso</item>
-        <item>@string/shekel</item>
-        <item>@string/nzd</item>
-        <item>@string/korna</item>
-        <item>@string/korne</item>
-        <item>@string/franc</item>
-        <item>@string/sar</item>
-        <item>@string/aed</item>
-        <item>@string/php</item>
-        <item>@string/gtq</item>
-        <item>@string/ghs</item>
+        <item>@string/great_britain_pound</item>
+        <item>@string/south_african_rand</item>
+        <item>@string/mexican_peso</item>
+        <item>@string/israel_new_shekel</item>
+        <item>@string/new_zealand_dollar</item>
+        <item>@string/swedish_krona</item>
+        <item>@string/norwegian_krone</item>
+        <item>@string/switzerland_franc</item>
+        <item>@string/saudi_arabia_riyal</item>
+        <item>@string/arab_emirates_dirham</item>
+        <item>@string/philippines_peso</item>
+        <item>@string/guatemala_quetzal</item>
+        <item>@string/ghana_new_cedi</item>
 
     </string-array>
 </resources>

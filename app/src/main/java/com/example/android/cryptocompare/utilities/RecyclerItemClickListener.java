@@ -1,6 +1,8 @@
-package com.example.android.cryptocompare;
+package com.example.android.cryptocompare.utilities;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -18,6 +20,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
     GestureDetector mGestureDetector;
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
         mListener = listener;
         mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {

@@ -1,74 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="172dp"
-    android:layout_height="230dp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_view"
-    android:layout_margin="5dp"
-    android:elevation="3dp"
-    android:layout_centerInParent="true"
-    card_view:cardCornerRadius="4dp"
-    android:background="#ffffff">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="4dp">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/card_toolbar"
+
+            <TextView
+                android:id="@+id/text_crypto_name"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_alignParentBottom="true"
-                android:background="#2E7032">
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:text="Crypto" />
 
-            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_crypto_name"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_crypto"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/app_name"
+                    tools:src="@mipmap/ic_launcher_round" />
+
+
+                <ImageView
+                    android:id="@+id/img_local"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/app_name"
+                    tools:src="@mipmap/ic_launcher_round" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_layout"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:id="@+id/crypto_image"
-                android:layout_marginTop="50dp"
-                android:layout_gravity="center"
-                tools:src="@drawable/btc"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/text_local_name"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    tools:text="World" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/text_colon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:id="@+id/flag_sym"
-                        tools:src="@drawable/ngn"/>
+                <TextView
+                    android:id="@+id/text_currency_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    tools:text="12.00" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:id="@+id/crypto_price"
-                        tools:text="34596"
-                        android:textSize="16sp"
-                        android:layout_toRightOf="@id/flag_sym"/>
-                    </RelativeLayout>
-
-                </LinearLayout>
 
             </LinearLayout>
 
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+
+</LinearLayout>
