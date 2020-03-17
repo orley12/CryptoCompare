@@ -19,4 +19,4 @@ you can then connect your device and intall the app by clicking the green play i
 - cryptocompare API.
 
 #### Resources
-- Dowload apk here ``https://github.com/orley12/CryptoCompare/raw/master/apk/app-debug-.apk``
+- [``Dowload apk here``](https://github.com/orley12/CryptoCompare/raw/master/apk/app-debug-.apk)
