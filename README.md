@@ -17,3 +17,6 @@ you can then connect your device and intall the app by clicking the green play i
 - RoomDB (Android 
 - Java
 - cryptocompare API.
+
+#### Resources
+- Dowload apk here ``https://github.com/orley12/CryptoCompare/raw/master/apk/app-debug-.apk``
