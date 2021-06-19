@@ -1,6 +1,3 @@
-#### Resources
-- [``Dowload APK here``](https://github.com/orley12/CryptoCompare/raw/master/apk/app-debug-.apk)
-
 #### What does this Application does?
 - This Android appliction that gives you up to date exchange rates of 20 currencies in bitcoin and etherium.
 it as two implementations contained in two branches, one uses SQLite database ,and the other use RoomDB.
